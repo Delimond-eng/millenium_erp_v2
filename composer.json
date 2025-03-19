@@ -1,0 +1,24 @@
+{
+    "name": "delimond/erpa-v2",
+    "description": "Un logiciel de comptabilité avec un systeme des paiements des agents",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Delimond-eng",
+            "email": "gastondelimond@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^12.2",
+        "vlucas/phpdotenv": "^5.6",
+        "illuminate/view": "^12.2",
+        "illuminate/filesystem": "^12.2",
+        "illuminate/validation": "^12.2",
+        "illuminate/http": "^12.2",
+        "illuminate/events": "^12.2"
+    }
+}

@@ -1,0 +1,9 @@
+.menu-section {
+    display: none;
+    /* Caché par défaut */
+}
+
+.menu-section.active {
+    display: block;
+    /* Affiché uniquement si actif */
+}
