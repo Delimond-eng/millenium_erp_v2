@@ -730,7 +730,7 @@
 		<!--**********************************
             Header start
         ***********************************-->
-		<?php echo $__env->make("components.header", array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+		@include("components.header")
 
 		<!--**********************************
             Header end ti-comment-alt
@@ -739,7 +739,7 @@
 		<!--**********************************
             Sidebar start
         ***********************************-->
-		<?php echo $__env->make("components.sidebar", array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+		@include("components.sidebar")
 		<!--**********************************
             Sidebar end
         ***********************************-->
@@ -747,7 +747,7 @@
 		<!--**********************************
             Content body start
         ***********************************-->
-		<?php echo $__env->yieldContent("content"); ?>
+		@yield("content")
 		<!--**********************************
             Content body end
         ***********************************-->
@@ -791,4 +791,4 @@
 
 
 <!-- Mirrored from kubayar.dexignzone.com/xhtml/empty-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Mar 2025 00:44:50 GMT -->
-</html><?php /**PATH C:\Users\Delimond\Documents\DEVFOLDER\PHP\erpa-v2\src\Views/layouts/app.blade.php ENDPATH**/ ?>
+</html>
