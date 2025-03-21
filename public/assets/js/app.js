@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
   // Sélection des éléments du DOM
   const headerItems = document.querySelectorAll(".header-item");
   const menuSections = document.querySelectorAll(".menu-section");
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Fonction pour afficher le menu correspondant
   function showMenu(menu) {
+    localStorage.setItem("menu", menu);
     // Cacher tous les menus
     menuSections.forEach((section) => section.classList.remove("active"));
 
@@ -35,10 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
   headerItems.forEach((item) => {
     item.addEventListener("click", function () {
       const selectedMenu = this.getAttribute("data-menu");
+
       showMenu(selectedMenu);
     });
   });
 
-  // Activer le menu "Accueil" par défaut
-  showMenu("home");
+  const menu = localStorage.getItem("menu");
+
+  if (menu !== "null") {
+    showMenu(menu);
+  } else {
+    showMenu("home");
+  }
 });

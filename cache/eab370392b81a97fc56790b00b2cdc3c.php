@@ -1,0 +1,1 @@
+<h1>Not Found</h1><?php /**PATH C:\Users\Delimond\Documents\DEVFOLDER\PHP\erpa-v2\src\Views/errors/404.blade.php ENDPATH**/ ?>

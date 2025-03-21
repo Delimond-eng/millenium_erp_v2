@@ -5,19 +5,31 @@
             <span class="nav-text">Gestion des proforma</span>
         </a>
         <ul aria-expanded="false" class="left">
-            <li><a class="dz-active" href="index-3.html">Proforma Client</a></li>
-            <li><a class="dz-active" href="index-2.html">Proforma Fournisseur</a></li>
-            <li><a class="dz-active" href="index-3.html">Liste des proforma</a></li>
+            <li><a class="dz-active" href="#">Nouveau Proforma Client</a></li>
+            <li><a class="dz-active" href="#">Nouveau Proforma Fournisseur</a></li>
+            <li class="">
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">Liste des proforma</a>
+                <ul aria-expanded="false" class="left mm-collapse">
+                    <li><a class="dz-active" href="#">Clients</a></li>
+                    <li><a class="dz-active" href="#">Fournisseurs</a></li>
+                </ul>
+            </li>
         </ul>
     </li>
-    <li><a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
+    <li class="{{ isActive(["/factures", "/facture_create"]) ? 'mm-active' : '' }}"><a class="has-arrow" href="javascript:void(0);" aria-expanded="false">
             <i class="flaticon-layout"></i>
             <span class="nav-text">Gestion des factures</span>
         </a>
         <ul aria-expanded="false" class="left">
-            <li><a class="dz-active" href="index-3.html">Facture Client</a></li>
-            <li><a class="dz-active" href="index-2.html">Facture Fournisseur</a></li>
-            <li><a class="dz-active" href="index-2.html">Liste des factures</a></li>
+            <li><a class="dz-active" href="index-3.html">Nouvelle Facture Client</a></li>
+            <li><a class="dz-active" href="index-2.html">Nouvelle Facture Fournisseur</a></li>
+            <li class="">
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">Liste des factures</a>
+                <ul aria-expanded="false" class="left mm-collapse">
+                    <li><a class="dz-active" href="/factures">Clients</a></li>
+                    <li><a class="dz-active" href="#">Fournisseurs</a></li>
+                </ul>
+            </li>
         </ul>
     </li>
    

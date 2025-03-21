@@ -4,12 +4,12 @@
             <div class="collapse navbar-collapse justify-content-between">
                 <div class="header-left">
                     <div class="nav-item d-flex align-items-center main-header-menu">
-                        <div class="grid-bx header-item" data-menu="home">
+                        <a href="/" class="grid-bx header-item" data-menu="home">
                             <i class="flaticon-home"></i>
                             <div class="content">
                                 <small>Accueil</small>
                             </div>
-                        </div>
+                        </a>
                         <div class="grid-bx header-item" data-menu="dashboard">
                             <i class="flaticon-app"></i>
                             <div class="content">
@@ -57,10 +57,10 @@
                 <ul class="navbar-nav header-right">
                     <li class="nav-item dropdown header-profile ps30">
                         <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                            <img src="assets/images/user.jpg" width="20" alt="">
+                            <img src="assets/images/avatar/5.png" width="20" alt="">
                             <div class="header-info ms-2 me-3">
-                                <span class="fs-13 font-w500 mb-0">Yatin Xarma</span>
-                                <small class="fs-12">Super Admin</small>
+                                <span class="fs-13 font-w500 mb-0">Gaston Delimond</span>
+                                <small class="fs-12">Comptable</small>
                             </div>
                             <div class="ms-auto me-1">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -76,10 +76,10 @@
                             <div class="card shadow-none border-0 mb-0">
                                 <div class="card-header px-4 py-2">
                                     <div class="d-flex align-items-center">
-                                        <img src="assets/images/user.jpg" class="avatar me-2" alt="">
+                                        <img src="assets/images/avatar/5.png" width="20" class="me-2" alt="">
                                         <div>
-                                            <h6 class="mb-0">Yatin Xarma</h6>
-                                            <small>Web Designer</small>
+                                            <h6 class="mb-0">Gaston Delimond</h6>
+                                            <small>Comptable</small>
                                         </div>
 
                                     </div>
@@ -112,22 +112,20 @@
                                     <a href="javascript:void(0);" class="dropdown-item ai-icon ">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="header-info">
-                                                <h6 class="mb-0 fs-14">Student Plan Active</h6>
-                                                <small class="fs-12">284 Days Left</small>
+                                                <h6 class="mb-0 fs-14">Plan basique</h6>
+                                                <small class="fs-12">284 Jours</small>
                                             </div>
                                             <div class="">
-                                                <span class="badge badge-primary light">Upgrade</span>
+                                                <span class="badge badge-primary light">Mettre à jour</span>
                                             </div>
                                         </div>
-
-
                                     </a>
                                 </div>
                                 <div class="card-footer px-0 py-2">
 
-                                    <a href="page-login.html" class="dropdown-item ai-icon">
+                                    <a href="/sign_in" class="dropdown-item ai-icon">
                                         <i class="flaticon-logout-1 fs-18 text-danger"></i>
-                                        <span class="ms-2 text-danger">Logout </span>
+                                        <span class="ms-2 text-danger">Déconnecter </span>
                                     </a>
                                 </div>
                             </div>

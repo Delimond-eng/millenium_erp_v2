@@ -11,14 +11,21 @@ use Illuminate\View\FileViewFinder;
 use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\Events\Dispatcher;
 
+session_start();
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
 $config = require __DIR__ . '/../config/database.php';
+require __DIR__ .'/../helpers/utils.php';
 
 try{
     $capsule = new Capsule;
-    $capsule->addConnection($config);
+    $capsule->addConnection($config["default"]);
+
+    /* foreach ($config['connections'] as $name => $dbConfig) {
+        $capsule->addConnection($dbConfig, $name);
+    } */
 
     $capsule->setAsGlobal();
     $capsule->bootEloquent();
@@ -45,7 +52,9 @@ $viewFinder = new FileViewFinder($filesystem, $viewPaths);
 
 $blade = new Factory($resolver, $viewFinder, new Dispatcher());
 
-$routes = require '../routes/web.php';
+$routesWeb = require '../routes/web.php';
+$routesApi = require '../routes/api.php';
+$routes = array_merge($routesWeb, $routesApi);
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 

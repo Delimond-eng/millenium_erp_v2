@@ -9,7 +9,7 @@
             <li><a class="dz-active" href="index-2.html">Attribution rôles</a></li>
         </ul>
     </li>
-    <li><a href="widget-basic.html" class="" aria-expanded="false">
+    <li class="mm-active"><a href="widget-basic.html" class="" aria-expanded="false">
             <i class="flaticon-app"></i>
             <span class="nav-text">Gestion des rôles</span>
         </a>

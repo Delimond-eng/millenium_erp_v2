@@ -11,9 +11,13 @@ class AuthController {
     }
 
     public function login() {
-        echo $this->view->make('auth.login')->render();
+        echo $this->view->make('auth.signin')->render();
     }
     public function register() {
-        echo $this->view->make('auth.register')->render();
+        echo $this->view->make('auth.signup')->render();
+    }
+
+    public function dbSelect() {
+        echo $this->view->make('dbselect')->render();
     }
 }
